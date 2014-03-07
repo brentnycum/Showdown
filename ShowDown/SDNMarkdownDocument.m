@@ -7,6 +7,13 @@
 //
 
 #import "SDNMarkdownDocument.h"
+#import "SDNMarkdownDocumentWindowController.h"
+
+@interface SDNMarkdownDocument ()
+
+@property SDNMarkdownDocumentWindowController *windowController;
+
+@end
 
 @implementation SDNMarkdownDocument
 
@@ -24,6 +31,12 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 }
 
 #pragma mark - NSDocument
+
+- (void)makeWindowControllers {
+	self.windowController = [[SDNMarkdownDocumentWindowController alloc] initWithWindowNibName:@"SDNMarkdown"];
+	
+	[self addWindowController:self.windowController];
+}
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
 	CFStringRef pathRef = (__bridge CFStringRef)[self.fileURL path];

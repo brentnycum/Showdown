@@ -15,6 +15,9 @@
 		9826817618C97705008BC762 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826817418C97705008BC762 /* MainMenu.xib */; };
 		9826817818C97705008BC762 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9826817718C97705008BC762 /* Images.xcassets */; };
 		9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826819418C978E4008BC762 /* SDNMarkdownDocument.m */; };
+		9826819818C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */; };
+		9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826819918C97EC5008BC762 /* SDNMarkdown.xib */; };
+		9826819C18C9801F008BC762 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9826819B18C9801F008BC762 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		9826817718C97705008BC762 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9826819318C978E4008BC762 /* SDNMarkdownDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNMarkdownDocument.h; sourceTree = "<group>"; };
 		9826819418C978E4008BC762 /* SDNMarkdownDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNMarkdownDocument.m; sourceTree = "<group>"; };
+		9826819618C97C7F008BC762 /* SDNMarkdownDocumentWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNMarkdownDocumentWindowController.h; sourceTree = "<group>"; };
+		9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNMarkdownDocumentWindowController.m; sourceTree = "<group>"; };
+		9826819918C97EC5008BC762 /* SDNMarkdown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDNMarkdown.xib; sourceTree = "<group>"; };
+		9826819B18C9801F008BC762 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9826819C18C9801F008BC762 /* WebKit.framework in Frameworks */,
 				9826816018C97705008BC762 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +76,7 @@
 		9826815E18C97705008BC762 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9826819B18C9801F008BC762 /* WebKit.framework */,
 				9826815F18C97705008BC762 /* Cocoa.framework */,
 				9826816118C97705008BC762 /* Other Frameworks */,
 			);
@@ -94,6 +103,9 @@
 				9826817718C97705008BC762 /* Images.xcassets */,
 				9826819318C978E4008BC762 /* SDNMarkdownDocument.h */,
 				9826819418C978E4008BC762 /* SDNMarkdownDocument.m */,
+				9826819618C97C7F008BC762 /* SDNMarkdownDocumentWindowController.h */,
+				9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */,
+				9826819918C97EC5008BC762 /* SDNMarkdown.xib */,
 			);
 			path = ShowDown;
 			sourceTree = "<group>";
@@ -167,6 +179,7 @@
 				9826817818C97705008BC762 /* Images.xcassets in Resources */,
 				9826817018C97705008BC762 /* Credits.rtf in Resources */,
 				9826817618C97705008BC762 /* MainMenu.xib in Resources */,
+				9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +193,7 @@
 				9826817318C97705008BC762 /* SDNAppDelegate.m in Sources */,
 				9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */,
 				9826816C18C97705008BC762 /* main.m in Sources */,
+				9826819818C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

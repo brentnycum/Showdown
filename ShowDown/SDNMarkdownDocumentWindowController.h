@@ -10,6 +10,4 @@
 
 @interface SDNMarkdownDocumentWindowController : NSWindowController
 
-
-
 @end

@@ -14,6 +14,7 @@
 		9826817318C97705008BC762 /* SDNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826817218C97705008BC762 /* SDNAppDelegate.m */; };
 		9826817618C97705008BC762 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826817418C97705008BC762 /* MainMenu.xib */; };
 		9826817818C97705008BC762 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9826817718C97705008BC762 /* Images.xcassets */; };
+		9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826819418C978E4008BC762 /* SDNMarkdownDocument.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +32,8 @@
 		9826817218C97705008BC762 /* SDNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNAppDelegate.m; sourceTree = "<group>"; };
 		9826817518C97705008BC762 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9826817718C97705008BC762 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		9826817E18C97706008BC762 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9826819318C978E4008BC762 /* SDNMarkdownDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNMarkdownDocument.h; sourceTree = "<group>"; };
+		9826819418C978E4008BC762 /* SDNMarkdownDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNMarkdownDocument.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				9826815F18C97705008BC762 /* Cocoa.framework */,
-				9826817E18C97706008BC762 /* XCTest.framework */,
 				9826816118C97705008BC762 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -86,11 +87,13 @@
 		9826816518C97705008BC762 /* ShowDown */ = {
 			isa = PBXGroup;
 			children = (
+				9826816618C97705008BC762 /* Supporting Files */,
 				9826817118C97705008BC762 /* SDNAppDelegate.h */,
 				9826817218C97705008BC762 /* SDNAppDelegate.m */,
 				9826817418C97705008BC762 /* MainMenu.xib */,
 				9826817718C97705008BC762 /* Images.xcassets */,
-				9826816618C97705008BC762 /* Supporting Files */,
+				9826819318C978E4008BC762 /* SDNMarkdownDocument.h */,
+				9826819418C978E4008BC762 /* SDNMarkdownDocument.m */,
 			);
 			path = ShowDown;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9826817318C97705008BC762 /* SDNAppDelegate.m in Sources */,
+				9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */,
 				9826816C18C97705008BC762 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

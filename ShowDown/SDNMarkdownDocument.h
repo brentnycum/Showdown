@@ -10,4 +10,6 @@
 
 @interface SDNMarkdownDocument : NSDocument
 
+- (NSString *)markdownRepresentation;
+
 @end

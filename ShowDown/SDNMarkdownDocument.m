@@ -9,6 +9,8 @@
 #import "SDNMarkdownDocument.h"
 #import "SDNMarkdownDocumentWindowController.h"
 
+#import <OCDiscount.h>
+
 @interface SDNMarkdownDocument ()
 
 @property NSString *fileContents;
@@ -21,6 +23,10 @@
 @implementation SDNMarkdownDocument
 
 #pragma mark - SDNMarkdownDocument
+
+- (NSString *)markdownRepresentation {
+	return [self.fileContents htmlStringFromMarkdown];
+}
 
 - (void)updateFileContents {
 	self.fileContents = [NSString stringWithContentsOfFile:self.fileURL.path encoding:NSUTF8StringEncoding error:NULL];

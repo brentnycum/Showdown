@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 It's Brent. All rights reserved.
 //
 
-#import <WebKit/WebKit.h>
+#import "SDNMarkdownDocument.h"
 #import "SDNMarkdownDocumentWindowController.h"
 
 @implementation SDNMarkdownDocumentWindowController
@@ -15,6 +15,16 @@
 
 - (void)windowDidLoad {
 	[super windowDidLoad];
+	
+	[self synchronizeWindowTitleWithDocumentName];
+	
+	[self reloadWebView];
+}
+
+- (void)reloadWebView {
+	SDNMarkdownDocument *markdownDocument = (SDNMarkdownDocument *)self.document;
+	
+	[self.webView.mainFrame loadHTMLString:[markdownDocument markdownRepresentation] baseURL:nil];
 }
 
 @end

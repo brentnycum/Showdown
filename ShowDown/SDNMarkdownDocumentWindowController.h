@@ -6,8 +6,13 @@
 //  Copyright (c) 2014 It's Brent. All rights reserved.
 //
 
+#import <WebKit/WebKit.h>
 #import <Cocoa/Cocoa.h>
 
 @interface SDNMarkdownDocumentWindowController : NSWindowController
+
+@property (weak) IBOutlet WebView *webView;
+
+- (void)reloadWebView;
 
 @end

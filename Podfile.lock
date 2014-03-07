@@ -1,0 +1,12 @@
+PODS:
+  - OCDiscount (0.2.0):
+    - OCDiscount/discount
+  - OCDiscount/discount (0.2.0)
+
+DEPENDENCIES:
+  - OCDiscount (~> 0.2)
+
+SPEC CHECKSUMS:
+  OCDiscount: 0c4e45473c2cf1adc2d4f9ecafe0b1f01dd505d7
+
+COCOAPODS: 0.29.0

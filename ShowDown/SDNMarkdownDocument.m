@@ -11,11 +11,20 @@
 
 @interface SDNMarkdownDocument ()
 
+@property NSString *fileContents;
 @property SDNMarkdownDocumentWindowController *windowController;
+
+- (void)updateFileContents;
 
 @end
 
 @implementation SDNMarkdownDocument
+
+#pragma mark - SDNMarkdownDocument
+
+- (void)updateFileContents {
+	self.fileContents = [NSString stringWithContentsOfFile:self.fileURL.path encoding:NSUTF8StringEncoding error:NULL];
+}
 
 #pragma mark - FSEvents
 
@@ -27,7 +36,7 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 				const FSEventStreamEventId eventIds[]) {
 	
 	SDNMarkdownDocument *document = (__bridge SDNMarkdownDocument *)(clientCallBackInfo);
-	
+	[document updateFileContents];
 }
 
 #pragma mark - NSDocument
@@ -41,6 +50,8 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 }
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError {
+	self.fileContents = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+	
 	CFStringRef pathRef = (__bridge CFStringRef)[self.fileURL path];
 	
     CFArrayRef pathsToWatch = CFArrayCreate(NULL, (const void **)&pathRef, 1, NULL);

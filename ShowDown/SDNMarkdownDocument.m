@@ -30,6 +30,8 @@
 
 - (void)updateFileContents {
 	self.fileContents = [NSString stringWithContentsOfFile:self.fileURL.path encoding:NSUTF8StringEncoding error:NULL];
+	
+	[self.windowController reloadWebView];
 }
 
 #pragma mark - FSEvents

@@ -9,6 +9,12 @@
 #import "SDNMarkdownDocument.h"
 #import "SDNMarkdownDocumentWindowController.h"
 
+@interface SDNMarkdownDocumentWindowController (private)
+
+- (NSString *)styleSheetText;
+
+@end
+
 @implementation SDNMarkdownDocumentWindowController
 
 #pragma mark - NSWindowController
@@ -23,6 +29,11 @@
 
 #pragma mark - SDNMarkdownDocumentWindowController
 
+- (NSString *)styleSheetText {
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"showdown" ofType:@"css"];
+	return [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+}
+
 - (void)reloadWebView {
 	_pageOffset = CGPointMake([self.webView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"].floatValue,
 							  [self.webView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"].floatValue);
@@ -34,11 +45,16 @@
 									<head>\
 									<meta charset='UTF-8'>\
 									<title>ShowDown</title>\
+									<style type='text/css'>\
+									%@\
+									</style>\
 									</head>\
 									<body>\
 									%@\
 									</body>\
-									</html>", [markdownDocument markdownRepresentation]];
+									</html>",
+									[self styleSheetText],
+									[markdownDocument markdownRepresentation]];
 	
 	[self.webView.mainFrame loadHTMLString:htmlRepresentation baseURL:nil];
 }

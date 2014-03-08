@@ -8,7 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SDNMarkdownDocument : NSDocument
+@interface SDNMarkdownDocument : NSDocument {
+	FSEventStreamRef _eventStream;
+}
 
 - (NSString *)markdownRepresentation;
 

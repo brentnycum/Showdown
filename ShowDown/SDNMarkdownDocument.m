@@ -11,9 +11,7 @@
 
 #import <OCDiscount.h>
 
-@interface SDNMarkdownDocument () {
-	FSEventStreamRef _eventStream;
-}
+@interface SDNMarkdownDocument ()
 
 @property NSString *fileContents;
 @property SDNMarkdownDocumentWindowController *windowController;

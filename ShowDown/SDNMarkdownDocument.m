@@ -80,7 +80,7 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 								 &context,
 								 pathsToWatch,
 								 kFSEventStreamEventIdSinceNow,
-								 1.0,
+								 0.5,
 								 kFSEventStreamCreateFlagFileEvents);
 	
 	FSEventStreamScheduleWithRunLoop(_eventStream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);

@@ -21,6 +21,8 @@
 	[self reloadWebView];
 }
 
+#pragma mark - SDNMarkdownDocumentWindowController
+
 - (void)reloadWebView {
 	SDNMarkdownDocument *markdownDocument = (SDNMarkdownDocument *)self.document;
 	

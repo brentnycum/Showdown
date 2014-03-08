@@ -24,6 +24,14 @@
 
 @implementation SDNMarkdownDocument
 
+#pragma mark - NSObject
+
+- (void)dealloc {
+	FSEventStreamStop(stream);
+	FSEventStreamInvalidate(stream);
+	FSEventStreamRelease(stream);
+}
+
 #pragma mark - SDNMarkdownDocument
 
 - (NSString *)markdownRepresentation {

@@ -12,7 +12,7 @@
 #import <OCDiscount.h>
 
 @interface SDNMarkdownDocument () {
-	FSEventStreamRef stream;
+	FSEventStreamRef _eventStream;
 }
 
 @property NSString *fileContents;
@@ -27,9 +27,9 @@
 #pragma mark - NSObject
 
 - (void)dealloc {
-	FSEventStreamStop(stream);
-	FSEventStreamInvalidate(stream);
-	FSEventStreamRelease(stream);
+	FSEventStreamStop(_eventStream);
+	FSEventStreamInvalidate(_eventStream);
+	FSEventStreamRelease(_eventStream);
 }
 
 #pragma mark - SDNMarkdownDocument
@@ -75,7 +75,7 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
     memset(&context, 0, sizeof(context));
 	context.info = (__bridge void *)(self);
 	
-    stream = FSEventStreamCreate(NULL,
+    _eventStream = FSEventStreamCreate(NULL,
 								 &fileChangedCallback,
 								 &context,
 								 pathsToWatch,
@@ -83,8 +83,8 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 								 1.0,
 								 kFSEventStreamCreateFlagFileEvents);
 	
-	FSEventStreamScheduleWithRunLoop(stream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
-	FSEventStreamStart(stream);
+	FSEventStreamScheduleWithRunLoop(_eventStream, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
+	FSEventStreamStart(_eventStream);
 	
 	return YES;
 }

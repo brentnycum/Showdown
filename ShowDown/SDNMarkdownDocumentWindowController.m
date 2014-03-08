@@ -24,6 +24,9 @@
 #pragma mark - SDNMarkdownDocumentWindowController
 
 - (void)reloadWebView {
+	_pageOffset = CGPointMake([self.webView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"].floatValue,
+							  [self.webView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"].floatValue);
+	
 	SDNMarkdownDocument *markdownDocument = (SDNMarkdownDocument *)self.document;
 	
 	NSString *htmlRepresentation = [NSString stringWithFormat:@"<!doctype html>\
@@ -38,6 +41,13 @@
 									</html>", [markdownDocument markdownRepresentation]];
 	
 	[self.webView.mainFrame loadHTMLString:htmlRepresentation baseURL:nil];
+}
+
+#pragma mark - WebFrameLoadDelegate
+
+- (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
+	[self.webView stringByEvaluatingJavaScriptFromString:
+	 [NSString stringWithFormat:@"window.scrollTo(%f, %f)", _pageOffset.x, _pageOffset.y]];
 }
 
 @end

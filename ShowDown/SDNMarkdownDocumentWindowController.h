@@ -9,7 +9,9 @@
 #import <WebKit/WebKit.h>
 #import <Cocoa/Cocoa.h>
 
-@interface SDNMarkdownDocumentWindowController : NSWindowController
+@interface SDNMarkdownDocumentWindowController : NSWindowController {
+	CGPoint _pageOffset;
+}
 
 @property (weak) IBOutlet WebView *webView;
 

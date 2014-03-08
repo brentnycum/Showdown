@@ -11,7 +11,9 @@
 
 #import <OCDiscount.h>
 
-@interface SDNMarkdownDocument ()
+@interface SDNMarkdownDocument () {
+	FSEventStreamRef stream;
+}
 
 @property NSString *fileContents;
 @property SDNMarkdownDocumentWindowController *windowController;
@@ -65,7 +67,7 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
     memset(&context, 0, sizeof(context));
 	context.info = (__bridge void *)(self);
 	
-    FSEventStreamRef stream = FSEventStreamCreate(NULL,
+    stream = FSEventStreamCreate(NULL,
 								 &fileChangedCallback,
 								 &context,
 								 pathsToWatch,

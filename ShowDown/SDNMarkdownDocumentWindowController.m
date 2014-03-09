@@ -30,7 +30,7 @@
 #pragma mark - SDNMarkdownDocumentWindowController
 
 - (NSString *)styleSheetText {
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"showdown" ofType:@"css"];
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bootstrap" ofType:@"css"];
 	return [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 }
 

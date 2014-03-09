@@ -5,6 +5,7 @@ A Mac OS X app to preview Markdown files. Current work in progress. Pretty bare 
 ## Credits... so far
 
  * [OCDiscount](https://github.com/sumardi/OCDiscount)
+ * [Bootstrap](http://getbootstrap.com/)
 
 ## Things to do
 

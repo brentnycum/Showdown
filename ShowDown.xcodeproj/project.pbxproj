@@ -18,6 +18,7 @@
 		9826819818C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */; };
 		9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826819918C97EC5008BC762 /* SDNMarkdown.xib */; };
 		9826819C18C9801F008BC762 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9826819B18C9801F008BC762 /* WebKit.framework */; };
+		982C9C6318CCF1B5001E9825 /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = 982C9C6218CCF1B5001E9825 /* bootstrap.css */; };
 		98AB003818CBB411009776C0 /* showdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 98AB003718CBB411009776C0 /* showdown.css */; };
 		CD912DB577074E4099FF5652 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 441514E3E95A4C0B9D140663 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNMarkdownDocumentWindowController.m; sourceTree = "<group>"; };
 		9826819918C97EC5008BC762 /* SDNMarkdown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDNMarkdown.xib; sourceTree = "<group>"; };
 		9826819B18C9801F008BC762 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		982C9C6218CCF1B5001E9825 /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.css; path = Resources/bootstrap.css; sourceTree = "<group>"; };
 		98AB003718CBB411009776C0 /* showdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = showdown.css; path = Resources/showdown.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 		98AB003618CBB37C009776C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				982C9C6218CCF1B5001E9825 /* bootstrap.css */,
 				98AB003718CBB411009776C0 /* showdown.css */,
 			);
 			name = Resources;
@@ -200,6 +203,7 @@
 				9826817618C97705008BC762 /* MainMenu.xib in Resources */,
 				98AB003818CBB411009776C0 /* showdown.css in Resources */,
 				9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */,
+				982C9C6318CCF1B5001E9825 /* bootstrap.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

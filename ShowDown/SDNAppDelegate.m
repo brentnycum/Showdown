@@ -7,6 +7,7 @@
 //
 
 #import "SDNAppDelegate.h"
+#import "SDNShowDown.h"
 
 @interface SDNAppDelegate (private)
 
@@ -28,13 +29,37 @@
 - (void)_buildColorSchemeMenu {
 	[_colorSchemeMenu removeAllItems];
 	
-	NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:@"Bootstrap" action:@selector(_switchColorScheme:) keyEquivalent:@""];
+	NSString *selectedColorScheme = [[NSUserDefaults standardUserDefaults] valueForKey:SDNColorSchemeKey];
 	
-	[_colorSchemeMenu addItem:menuItem];
+	NSDictionary *defaultColorSchemes = @{
+		@"Bootstrap": @"bootstrap",
+		@"ShowDown": @"showdown"
+	};
+	
+	for (NSString *key in defaultColorSchemes) {
+		NSString *keyValue = [defaultColorSchemes valueForKey:key];
+		
+		NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:key action:@selector(_switchColorScheme:) keyEquivalent:@""];
+		[menuItem setRepresentedObject:keyValue];
+		
+		if ([selectedColorScheme isEqualTo:keyValue]) {
+			[menuItem setState:NSOnState];
+		} else {
+			[menuItem setState:NSOffState];
+		}
+		
+		[_colorSchemeMenu addItem:menuItem];
+	}
 }
 
 - (void)_switchColorScheme:(id)sender {
+	NSMenuItem *selectedMenuItem = (NSMenuItem *)sender;
 	
+	[[NSUserDefaults standardUserDefaults] setValue:[selectedMenuItem representedObject] forKey:SDNColorSchemeKey];
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:SDNColorSchemeChangedNotification object:nil];
+	
+	[self _buildColorSchemeMenu];
 }
 
 @end

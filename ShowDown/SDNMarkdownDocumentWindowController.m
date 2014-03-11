@@ -8,14 +8,22 @@
 
 #import "SDNMarkdownDocument.h"
 #import "SDNMarkdownDocumentWindowController.h"
+#import "SDNShowDown.h"
 
 @interface SDNMarkdownDocumentWindowController (private)
 
 - (NSString *)styleSheetText;
+- (void)_colorSchemeSelectionChanged:(NSNotification *)notification;
 
 @end
 
 @implementation SDNMarkdownDocumentWindowController
+
+#pragma mark - NSObject
+
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - NSWindowController
 
@@ -25,12 +33,23 @@
 	[self synchronizeWindowTitleWithDocumentName];
 	
 	[self reloadWebView];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(_colorSchemeSelectionChanged:)
+												 name:SDNColorSchemeChangedNotification
+											   object:nil];
 }
 
 #pragma mark - SDNMarkdownDocumentWindowController
 
 - (NSString *)styleSheetText {
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bootstrap" ofType:@"css"];
+	NSString *selectedColorScheme = [[NSUserDefaults standardUserDefaults] valueForKey:SDNColorSchemeKey];
+	
+	if (!selectedColorScheme) {
+		selectedColorScheme = SDNDefaultColorScheme;
+	}
+	
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:selectedColorScheme ofType:@"css"];
 	return [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 }
 
@@ -57,6 +76,10 @@
 									[markdownDocument markdownRepresentation]];
 	
 	[self.webView.mainFrame loadHTMLString:htmlRepresentation baseURL:nil];
+}
+
+- (void)_colorSchemeSelectionChanged:(NSNotification *)notification {
+	[self reloadWebView];
 }
 
 #pragma mark - WebFrameLoadDelegate

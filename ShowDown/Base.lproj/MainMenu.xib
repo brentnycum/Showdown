@@ -139,7 +139,11 @@
                 </menuItem>
             </items>
         </menu>
-        <customObject id="494" customClass="SDNAppDelegate"/>
+        <customObject id="494" customClass="SDNAppDelegate">
+            <connections>
+                <outlet property="colorSchemeMenu" destination="Xvs-49-tHs" id="rns-41-lFT"/>
+            </connections>
+        </customObject>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
 </document>

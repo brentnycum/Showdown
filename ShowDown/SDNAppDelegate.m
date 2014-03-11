@@ -33,23 +33,22 @@
 	
 	NSDictionary *defaultColorSchemes = @{
 		@"Bootstrap": @"bootstrap",
+		@"Slate Bootstrap": @"bootstrap-slate",
 		@"ShowDown": @"showdown"
 	};
 	
-	for (NSString *key in defaultColorSchemes) {
-		NSString *keyValue = [defaultColorSchemes valueForKey:key];
-		
+	[defaultColorSchemes enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {
 		NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle:key action:@selector(_switchColorScheme:) keyEquivalent:@""];
-		[menuItem setRepresentedObject:keyValue];
+		[menuItem setRepresentedObject:value];
 		
-		if ([selectedColorScheme isEqualTo:keyValue]) {
+		if ([selectedColorScheme isEqualTo:value]) {
 			[menuItem setState:NSOnState];
 		} else {
 			[menuItem setState:NSOffState];
 		}
 		
 		[_colorSchemeMenu addItem:menuItem];
-	}
+	}];
 }
 
 - (void)_switchColorScheme:(id)sender {

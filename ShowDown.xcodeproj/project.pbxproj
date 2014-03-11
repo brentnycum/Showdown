@@ -19,6 +19,7 @@
 		9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826819918C97EC5008BC762 /* SDNMarkdown.xib */; };
 		9826819C18C9801F008BC762 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9826819B18C9801F008BC762 /* WebKit.framework */; };
 		982C9C6318CCF1B5001E9825 /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = 982C9C6218CCF1B5001E9825 /* bootstrap.css */; };
+		98A9E68F18CEBE2600DBC274 /* SDNShowDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */; };
 		98AB003818CBB411009776C0 /* showdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 98AB003718CBB411009776C0 /* showdown.css */; };
 		CD912DB577074E4099FF5652 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 441514E3E95A4C0B9D140663 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,8 @@
 		9826819918C97EC5008BC762 /* SDNMarkdown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDNMarkdown.xib; sourceTree = "<group>"; };
 		9826819B18C9801F008BC762 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		982C9C6218CCF1B5001E9825 /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.css; path = Resources/bootstrap.css; sourceTree = "<group>"; };
+		98A9E68D18CEBE2600DBC274 /* SDNShowDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNShowDown.h; sourceTree = "<group>"; };
+		98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNShowDown.m; sourceTree = "<group>"; };
 		98AB003718CBB411009776C0 /* showdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = showdown.css; path = Resources/showdown.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +120,8 @@
 				9826819618C97C7F008BC762 /* SDNMarkdownDocumentWindowController.h */,
 				9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */,
 				9826819918C97EC5008BC762 /* SDNMarkdown.xib */,
+				98A9E68D18CEBE2600DBC274 /* SDNShowDown.h */,
+				98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */,
 			);
 			path = ShowDown;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			files = (
 				9826817318C97705008BC762 /* SDNAppDelegate.m in Sources */,
 				9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */,
+				98A9E68F18CEBE2600DBC274 /* SDNShowDown.m in Sources */,
 				9826816C18C97705008BC762 /* main.m in Sources */,
 				9826819818C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m in Sources */,
 			);

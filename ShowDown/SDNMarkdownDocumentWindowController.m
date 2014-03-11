@@ -12,7 +12,7 @@
 
 @interface SDNMarkdownDocumentWindowController (private)
 
-- (NSString *)styleSheetText;
+- (NSString *)_styleSheetText;
 - (void)_colorSchemeSelectionChanged:(NSNotification *)notification;
 
 @end
@@ -42,17 +42,6 @@
 
 #pragma mark - SDNMarkdownDocumentWindowController
 
-- (NSString *)styleSheetText {
-	NSString *selectedColorScheme = [[NSUserDefaults standardUserDefaults] valueForKey:SDNColorSchemeKey];
-	
-	if (!selectedColorScheme) {
-		selectedColorScheme = SDNDefaultColorScheme;
-	}
-	
-	NSString *filePath = [[NSBundle mainBundle] pathForResource:selectedColorScheme ofType:@"css"];
-	return [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-}
-
 - (void)reloadWebView {
 	_pageOffset = CGPointMake([self.webView stringByEvaluatingJavaScriptFromString:@"window.pageXOffset"].floatValue,
 							  [self.webView stringByEvaluatingJavaScriptFromString:@"window.pageYOffset"].floatValue);
@@ -72,10 +61,23 @@
 									%@\
 									</body>\
 									</html>",
-									[self styleSheetText],
+									[self _styleSheetText],
 									[markdownDocument markdownRepresentation]];
 	
 	[self.webView.mainFrame loadHTMLString:htmlRepresentation baseURL:nil];
+}
+
+#pragma mark - SDNMarkdownDocumentWindowController private
+
+- (NSString *)_styleSheetText {
+	NSString *selectedColorScheme = [[NSUserDefaults standardUserDefaults] valueForKey:SDNColorSchemeKey];
+	
+	if (!selectedColorScheme) {
+		selectedColorScheme = SDNDefaultColorScheme;
+	}
+	
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:selectedColorScheme ofType:@"css"];
+	return [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
 }
 
 - (void)_colorSchemeSelectionChanged:(NSNotification *)notification {

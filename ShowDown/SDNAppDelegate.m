@@ -17,9 +17,13 @@
 
 @implementation SDNAppDelegate
 
+#pragma mark - NSApplicationDelegate
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	[self _buildColorSchemeMenu];
 }
+
+#pragma mark - SDNAppDelegate
 
 - (void)_buildColorSchemeMenu {
 	[_colorSchemeMenu removeAllItems];

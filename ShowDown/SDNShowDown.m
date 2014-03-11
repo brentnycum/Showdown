@@ -9,6 +9,7 @@
 #import "SDNShowDown.h"
 
 NSString * const SDNColorSchemeKey = @"SDNColorSchemeKey";
+NSString * const SDNDefaultColorScheme = @"bootstrap";
 NSString * const SDNColorSchemeChangedNotification = @"SDNColorSchemeChangedNotification";
 
 @implementation SDNShowDown

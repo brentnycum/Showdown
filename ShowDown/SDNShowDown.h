@@ -13,4 +13,5 @@
 @end
 
 extern NSString * const SDNColorSchemeKey;
+extern NSString * const SDNDefaultColorScheme;
 extern NSString * const SDNColorSchemeChangedNotification;

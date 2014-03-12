@@ -1,4 +1,4 @@
-# ShowDown
+# Showdown
 
 A Mac OS X app to preview Markdown files. Current work in progress. Pretty bare so far. Remember to use `pod install` when building.
 

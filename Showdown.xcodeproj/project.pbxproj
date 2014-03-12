@@ -19,7 +19,7 @@
 		9826819A18C97EC5008BC762 /* SDNMarkdown.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9826819918C97EC5008BC762 /* SDNMarkdown.xib */; };
 		9826819C18C9801F008BC762 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9826819B18C9801F008BC762 /* WebKit.framework */; };
 		982C9C6318CCF1B5001E9825 /* bootstrap.css in Resources */ = {isa = PBXBuildFile; fileRef = 982C9C6218CCF1B5001E9825 /* bootstrap.css */; };
-		98A9E68F18CEBE2600DBC274 /* SDNShowDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */; };
+		98A9E68F18CEBE2600DBC274 /* SDNShowdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E68E18CEBE2600DBC274 /* SDNShowdown.m */; };
 		98A9E69118CEC73100DBC274 /* bootstrap-slate.css in Resources */ = {isa = PBXBuildFile; fileRef = 98A9E69018CEC73100DBC274 /* bootstrap-slate.css */; };
 		98AB003818CBB411009776C0 /* showdown.css in Resources */ = {isa = PBXBuildFile; fileRef = 98AB003718CBB411009776C0 /* showdown.css */; };
 		CD912DB577074E4099FF5652 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 441514E3E95A4C0B9D140663 /* libPods.a */; };
@@ -28,15 +28,15 @@
 /* Begin PBXFileReference section */
 		441514E3E95A4C0B9D140663 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		530026127F8A4EF68E34B258 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		9826815C18C97705008BC762 /* ShowDown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowDown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9826815C18C97705008BC762 /* Showdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9826815F18C97705008BC762 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		9826816218C97705008BC762 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9826816318C97705008BC762 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9826816418C97705008BC762 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9826816718C97705008BC762 /* ShowDown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShowDown-Info.plist"; sourceTree = "<group>"; };
+		9826816718C97705008BC762 /* Showdown-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Showdown-Info.plist"; sourceTree = "<group>"; };
 		9826816918C97705008BC762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9826816B18C97705008BC762 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9826816D18C97705008BC762 /* ShowDown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShowDown-Prefix.pch"; sourceTree = "<group>"; };
+		9826816D18C97705008BC762 /* Showdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Showdown-Prefix.pch"; sourceTree = "<group>"; };
 		9826816F18C97705008BC762 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		9826817118C97705008BC762 /* SDNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDNAppDelegate.h; sourceTree = "<group>"; };
 		9826817218C97705008BC762 /* SDNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDNAppDelegate.m; sourceTree = "<group>"; };
@@ -49,8 +49,8 @@
 		9826819918C97EC5008BC762 /* SDNMarkdown.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SDNMarkdown.xib; sourceTree = "<group>"; };
 		9826819B18C9801F008BC762 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		982C9C6218CCF1B5001E9825 /* bootstrap.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = bootstrap.css; path = Resources/bootstrap.css; sourceTree = "<group>"; };
-		98A9E68D18CEBE2600DBC274 /* SDNShowDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNShowDown.h; sourceTree = "<group>"; };
-		98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNShowDown.m; sourceTree = "<group>"; };
+		98A9E68D18CEBE2600DBC274 /* SDNShowdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDNShowdown.h; sourceTree = "<group>"; };
+		98A9E68E18CEBE2600DBC274 /* SDNShowdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDNShowdown.m; sourceTree = "<group>"; };
 		98A9E69018CEC73100DBC274 /* bootstrap-slate.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = "bootstrap-slate.css"; path = "Resources/bootstrap-slate.css"; sourceTree = "<group>"; };
 		98AB003718CBB411009776C0 /* showdown.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = showdown.css; path = Resources/showdown.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,7 +72,7 @@
 		9826815318C97705008BC762 = {
 			isa = PBXGroup;
 			children = (
-				9826816518C97705008BC762 /* ShowDown */,
+				9826816518C97705008BC762 /* Showdown */,
 				9826815E18C97705008BC762 /* Frameworks */,
 				9826815D18C97705008BC762 /* Products */,
 				530026127F8A4EF68E34B258 /* Pods.xcconfig */,
@@ -82,7 +82,7 @@
 		9826815D18C97705008BC762 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9826815C18C97705008BC762 /* ShowDown.app */,
+				9826815C18C97705008BC762 /* Showdown.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +108,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		9826816518C97705008BC762 /* ShowDown */ = {
+		9826816518C97705008BC762 /* Showdown */ = {
 			isa = PBXGroup;
 			children = (
 				98AB003618CBB37C009776C0 /* Resources */,
@@ -122,19 +122,20 @@
 				9826819618C97C7F008BC762 /* SDNMarkdownDocumentWindowController.h */,
 				9826819718C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m */,
 				9826819918C97EC5008BC762 /* SDNMarkdown.xib */,
-				98A9E68D18CEBE2600DBC274 /* SDNShowDown.h */,
-				98A9E68E18CEBE2600DBC274 /* SDNShowDown.m */,
+				98A9E68D18CEBE2600DBC274 /* SDNShowdown.h */,
+				98A9E68E18CEBE2600DBC274 /* SDNShowdown.m */,
 			);
-			path = ShowDown;
+			name = Showdown;
+			path = Showdown;
 			sourceTree = "<group>";
 		};
 		9826816618C97705008BC762 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9826816718C97705008BC762 /* ShowDown-Info.plist */,
+				9826816718C97705008BC762 /* Showdown-Info.plist */,
 				9826816818C97705008BC762 /* InfoPlist.strings */,
 				9826816B18C97705008BC762 /* main.m */,
-				9826816D18C97705008BC762 /* ShowDown-Prefix.pch */,
+				9826816D18C97705008BC762 /* Showdown-Prefix.pch */,
 				9826816E18C97705008BC762 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -153,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9826815B18C97705008BC762 /* ShowDown */ = {
+		9826815B18C97705008BC762 /* Showdown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9826818D18C97706008BC762 /* Build configuration list for PBXNativeTarget "ShowDown" */;
+			buildConfigurationList = 9826818D18C97706008BC762 /* Build configuration list for PBXNativeTarget "Showdown" */;
 			buildPhases = (
 				CAC38D58D3574B9EAC64A62C /* Check Pods Manifest.lock */,
 				9826815818C97705008BC762 /* Sources */,
@@ -167,9 +168,9 @@
 			);
 			dependencies = (
 			);
-			name = ShowDown;
-			productName = ShowDown;
-			productReference = 9826815C18C97705008BC762 /* ShowDown.app */;
+			name = Showdown;
+			productName = Showdown;
+			productReference = 9826815C18C97705008BC762 /* Showdown.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +183,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "It's Brent";
 			};
-			buildConfigurationList = 9826815718C97705008BC762 /* Build configuration list for PBXProject "ShowDown" */;
+			buildConfigurationList = 9826815718C97705008BC762 /* Build configuration list for PBXProject "Showdown" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -195,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9826815B18C97705008BC762 /* ShowDown */,
+				9826815B18C97705008BC762 /* Showdown */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +259,7 @@
 			files = (
 				9826817318C97705008BC762 /* SDNAppDelegate.m in Sources */,
 				9826819518C978E4008BC762 /* SDNMarkdownDocument.m in Sources */,
-				98A9E68F18CEBE2600DBC274 /* SDNShowDown.m in Sources */,
+				98A9E68F18CEBE2600DBC274 /* SDNShowdown.m in Sources */,
 				9826816C18C97705008BC762 /* main.m in Sources */,
 				9826819818C97C7F008BC762 /* SDNMarkdownDocumentWindowController.m in Sources */,
 			);
@@ -369,9 +370,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShowDown/ShowDown-Prefix.pch";
-				INFOPLIST_FILE = "ShowDown/ShowDown-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Showdown/Showdown-Prefix.pch";
+				INFOPLIST_FILE = "Showdown/Showdown-Info.plist";
+				PRODUCT_NAME = Showdown;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -383,9 +384,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ShowDown/ShowDown-Prefix.pch";
-				INFOPLIST_FILE = "ShowDown/ShowDown-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Showdown/Showdown-Prefix.pch";
+				INFOPLIST_FILE = "Showdown/Showdown-Info.plist";
+				PRODUCT_NAME = Showdown;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -393,7 +394,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9826815718C97705008BC762 /* Build configuration list for PBXProject "ShowDown" */ = {
+		9826815718C97705008BC762 /* Build configuration list for PBXProject "Showdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9826818B18C97706008BC762 /* Debug */,
@@ -402,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9826818D18C97706008BC762 /* Build configuration list for PBXNativeTarget "ShowDown" */ = {
+		9826818D18C97706008BC762 /* Build configuration list for PBXNativeTarget "Showdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9826818E18C97706008BC762 /* Debug */,

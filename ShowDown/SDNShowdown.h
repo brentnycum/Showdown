@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SDNShowDown : NSObject
+@interface SDNShowdown : NSObject
 
 @end
 

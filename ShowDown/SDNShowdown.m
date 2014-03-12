@@ -6,12 +6,12 @@
 //  Copyright (c) 2014 It's Brent. All rights reserved.
 //
 
-#import "SDNShowDown.h"
+#import "SDNShowdown.h"
 
 NSString * const SDNColorSchemeKey = @"SDNColorSchemeKey";
 NSString * const SDNDefaultColorScheme = @"bootstrap";
 NSString * const SDNColorSchemeChangedNotification = @"SDNColorSchemeChangedNotification";
 
-@implementation SDNShowDown
+@implementation SDNShowdown
 
 @end

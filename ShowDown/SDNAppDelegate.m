@@ -34,7 +34,7 @@
 	NSDictionary *defaultColorSchemes = @{
 		@"Bootstrap": @"bootstrap",
 		@"Slate Bootstrap": @"bootstrap-slate",
-		@"ShowDown": @"showdown"
+		@"Showdown": @"showdown"
 	};
 	
 	[defaultColorSchemes enumerateKeysAndObjectsUsingBlock:^(id key, id value, BOOL *stop) {

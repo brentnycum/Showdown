@@ -89,6 +89,10 @@
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
 	[self.webView stringByEvaluatingJavaScriptFromString:
 	 [NSString stringWithFormat:@"window.scrollTo(%f, %f)", _pageOffset.x, _pageOffset.y]];
+	
+	NSScrollView *scrollView = self.webView.mainFrame.frameView.documentView.enclosingScrollView;
+	[scrollView setHorizontalScrollElasticity:NSScrollElasticityNone];
+	[scrollView setVerticalScrollElasticity:NSScrollElasticityNone];
 }
 
 @end

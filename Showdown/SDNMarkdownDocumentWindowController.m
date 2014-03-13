@@ -34,7 +34,9 @@
 	NSString *windowLocationAndSize = [[NSUserDefaults standardUserDefaults] valueForKey:SDNWindowLocationAndSize];
 	
 	if (windowLocationAndSize) {
-		[self.window setFrame:NSRectFromString(windowLocationAndSize) display:YES];
+		NSRect windowRect = NSRectFromString(windowLocationAndSize);
+		
+		[self.window setFrame:windowRect display:YES];
 	}
 	
 	[self synchronizeWindowTitleWithDocumentName];
@@ -92,7 +94,9 @@
 }
 
 - (void)_saveWindowLocationAndSize {
-	[[NSUserDefaults standardUserDefaults] setValue:NSStringFromRect(self.window.frame) forKey:SDNWindowLocationAndSize];
+	NSString *windowFrame = NSStringFromRect(self.window.frame);
+	
+	[[NSUserDefaults standardUserDefaults] setValue:windowFrame forKey:SDNWindowLocationAndSize];
 }
 
 #pragma mark - WebFrameLoadDelegate

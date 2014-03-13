@@ -10,6 +10,9 @@
 
 @interface SDNAppDelegate : NSObject <NSApplicationDelegate>
 
+/**
+ *  The color scheme menu that the app will populate.
+ */
 @property (nonatomic, retain) IBOutlet NSMenu *colorSchemeMenu;
 
 @end

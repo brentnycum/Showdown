@@ -13,8 +13,14 @@
 	CGPoint _pageOffset;
 }
 
+/**
+ *  The web view used in the window.
+ */
 @property (weak) IBOutlet WebView *webView;
 
+/**
+ *  Refreshes the web view.
+ */
 - (void)reloadWebView;
 
 @end

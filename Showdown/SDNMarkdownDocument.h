@@ -12,6 +12,11 @@
 	FSEventStreamRef _eventStream;
 }
 
+/**
+ *  Gets the Markdown representation of the current document.
+ *
+ *  @return The document's markdown representation.
+ */
 - (NSString *)markdownRepresentation;
 
 @end

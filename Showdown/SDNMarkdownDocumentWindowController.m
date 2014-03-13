@@ -14,6 +14,7 @@
 
 - (NSString *)_styleSheetText;
 - (void)_colorSchemeSelectionChanged:(NSNotification *)notification;
+- (void)_saveWindowLocationAndSize;
 
 @end
 
@@ -29,6 +30,12 @@
 
 - (void)windowDidLoad {
 	[super windowDidLoad];
+	
+	NSString *windowLocationAndSize = [[NSUserDefaults standardUserDefaults] valueForKey:SDNWindowLocationAndSize];
+	
+	if (windowLocationAndSize) {
+		[self.window setFrame:NSRectFromString(windowLocationAndSize) display:YES];
+	}
 	
 	[self synchronizeWindowTitleWithDocumentName];
 	
@@ -84,6 +91,10 @@
 	[self reloadWebView];
 }
 
+- (void)_saveWindowLocationAndSize {
+	[[NSUserDefaults standardUserDefaults] setValue:NSStringFromRect(self.window.frame) forKey:SDNWindowLocationAndSize];
+}
+
 #pragma mark - WebFrameLoadDelegate
 
 - (void)webView:(WebView *)sender didFinishLoadForFrame:(WebFrame *)frame {
@@ -93,6 +104,20 @@
 	NSScrollView *scrollView = self.webView.mainFrame.frameView.documentView.enclosingScrollView;
 	[scrollView setHorizontalScrollElasticity:NSScrollElasticityNone];
 	[scrollView setVerticalScrollElasticity:NSScrollElasticityNone];
+}
+
+#pragma mark - NSWindowDelegate
+
+- (void)windowDidBecomeMain:(NSNotification *)notification {
+	[self _saveWindowLocationAndSize];
+}
+
+- (void)windowDidMove:(NSNotification *)notification {
+	[self _saveWindowLocationAndSize];
+}
+
+- (void)windowDidResize:(NSNotification *)notification {
+	[self _saveWindowLocationAndSize];
 }
 
 @end

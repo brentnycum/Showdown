@@ -11,6 +11,7 @@
 NSString * const SDNColorSchemeKey = @"SDNColorSchemeKey";
 NSString * const SDNDefaultColorScheme = @"bootstrap";
 NSString * const SDNColorSchemeChangedNotification = @"SDNColorSchemeChangedNotification";
+NSString * const SDNWindowLocationAndSize = @"SDNWindowLocationAndSize";
 
 @implementation SDNShowdown
 

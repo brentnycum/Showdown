@@ -9,7 +9,7 @@
 #import <WebKit/WebKit.h>
 #import <Cocoa/Cocoa.h>
 
-@interface SDNMarkdownDocumentWindowController : NSWindowController {
+@interface SDNMarkdownDocumentWindowController : NSWindowController <NSWindowDelegate> {
 	CGPoint _pageOffset;
 }
 

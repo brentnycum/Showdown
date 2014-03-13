@@ -59,6 +59,7 @@ void fileChangedCallback(ConstFSEventStreamRef streamRef,
 
 - (void)makeWindowControllers {
 	self.windowController = [[SDNMarkdownDocumentWindowController alloc] initWithWindowNibName:@"SDNMarkdown"];
+	[self.windowController setShouldCascadeWindows:YES];
 	
 	[self addWindowController:self.windowController];
 }
